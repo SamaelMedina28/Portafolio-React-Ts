@@ -12,6 +12,28 @@ interface Props {
 }
 
 export default function ProjectItem({ name, image_path, description, technologies, githubLink }: Props) {
+  const getColor = (color: string) => {
+    switch (color) {
+      case "orange":
+        return "bg-orange-500/20 text-orange-300";
+      case "blue":
+        return "bg-blue-500/20 text-blue-300";
+      case "yellow":
+        return "bg-yellow-500/20 text-yellow-300";
+      case "green":
+        return "bg-green-500/20 text-green-300";
+      case "purple":
+        return "bg-purple-500/20 text-purple-300";
+      case "cyan":
+        return "bg-cyan-500/20 text-cyan-300";
+      case "sky":
+        return "bg-sky-500/20 text-sky-300";
+      case "red":
+        return "bg-red-500/20 text-red-300";
+      default:
+        return "bg-black-500/20 text-black-300";
+    }
+  };
   return (
     <div className="project-item">
       <div className="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
@@ -21,7 +43,7 @@ export default function ProjectItem({ name, image_path, description, technologie
           <p className="text-gray-300 text-sm mb-4">{description}</p>
           <div className="flex flex-wrap">
             {technologies.map((tech, index) => (
-              <span key={index} className={`tech-tag bg-${tech.color}-500/20 text-${tech.color}-300`}>{tech.name}</span>
+              <span key={index} className={`tech-tag ${getColor(tech.color)}`}>{tech.name}</span>
             ))}
           </div>
           <a href={githubLink} target="_blank"

@@ -1,5 +1,6 @@
 import ProjectItem from "./ProjectItem";
 import { projectsData } from "../Data/projectsData";
+
 export default function Projects() {
   return (
     <>

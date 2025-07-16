@@ -60,18 +60,6 @@ export default function SkillsSwiper() {
         },
       }}
       modules={[EffectCoverflow, Pagination, Autoplay]}
-      onSwiper={(swiper) => {
-        // Agregar efecto hover para pausar autoplay
-        const slides = document.querySelectorAll('.swiper-slide');
-        slides.forEach((slide) => {
-          slide.addEventListener('mouseenter', () => {
-            swiper.autoplay.stop();
-          });
-          slide.addEventListener('mouseleave', () => {
-            swiper.autoplay.start();
-          });
-        });
-      }}
       onSlideChange={() => console.log('slide change')}
     >
       {skillsData.map((skill: { name: string; icon: string | React.ReactNode; description: string; }, index: number) => (
