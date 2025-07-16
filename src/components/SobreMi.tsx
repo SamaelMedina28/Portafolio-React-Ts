@@ -1,3 +1,5 @@
+import Titles from "./ui/Titles";
+
 export default function SobreMi() {
   return (
     <section id="sobre-mi" className="py-24 px-6 md:px-12 max-w-4xl mx-auto relative overflow-hidden">
@@ -10,11 +12,7 @@ export default function SobreMi() {
       </div>
 
       <div className="relative z-10 text-center">
-        <span className="inline-block mb-4 text-blue-400 font-mono text-sm tracking-widest">MI HISTORIA</span>
-        <h2
-          className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-blue-500 to-blue-600 animate-text-glow">
-          Sobre Mí</h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-8"></div>
+        <Titles title="Sobre Mí" subtitle="MI HISTORIA"/>
 
         <div
           className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-blue-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10">

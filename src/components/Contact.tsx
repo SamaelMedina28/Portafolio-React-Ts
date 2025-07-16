@@ -1,6 +1,7 @@
 import { useState } from "react"
 import ContactInformation from "./ContactInformation";
 import ContactSocialMedia from "./ContactSocialMedia";
+import Titles from "./ui/Titles";
 
 export default function Contact() {
   const [data, setData] = useState({
@@ -70,14 +71,7 @@ export default function Contact() {
 
       <div className="relative z-10">
         <div className="text-center mb-12">
-          <span className="inline-block mb-4 text-blue-400 font-mono text-sm tracking-widest">CONTACTO</span>
-          <h2
-            className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-blue-500 to-blue-600 animate-text-glow">
-            Hablemos
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-8"></div>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto">¿Tienes un proyecto en mente? Envíame un mensaje y
-            trabajemos juntos para hacerlo realidad.</p>
+          <Titles title="Hablemos" subtitle="CONTACTO" description="¿Tienes un proyecto en mente? Envíame un mensaje y trabajemos juntos para hacerlo realidad." />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

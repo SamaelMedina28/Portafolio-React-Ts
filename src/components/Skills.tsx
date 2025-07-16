@@ -1,4 +1,5 @@
 import SkillsSwiper from "./SkillsSwiper";
+import Titles from "./ui/Titles";
 
 export default function Skills() {
   return (
@@ -13,14 +14,7 @@ export default function Skills() {
 
       <div className="relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block mb-4 text-blue-400 font-mono text-sm tracking-widest">HABILIDADES
-            TÉCNICAS</span>
-          <h2
-            className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-blue-500 to-blue-600 animate-text-glow">
-            Mis Skills</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-8"></div>
-          <p className="text-lg text-slate-300 max-w-3xl mx-auto">Tecnologías y herramientas con las que trabajo para
-            crear experiencias digitales excepcionales.</p>
+          <Titles title="Mis Skills" subtitle="HABILIDADES TÉCNICAS" description="Tecnologías y herramientas con las que trabajo para crear experiencias digitales excepcionales." />
           <SkillsSwiper />
 
         </div>

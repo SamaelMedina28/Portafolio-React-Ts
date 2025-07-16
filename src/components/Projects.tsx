@@ -1,5 +1,6 @@
 import ProjectItem from "./ProjectItem";
 import { projectsData } from "../Data/projectsData";
+import Titles from "./ui/Titles";
 
 export default function Projects() {
   return (
@@ -12,11 +13,7 @@ export default function Projects() {
 
         <div className="relative z-10">
           <div className="text-center mb-16">
-            <span className="inline-block mb-4 text-blue-400 font-mono text-sm tracking-widest">MIS PROYECTOS</span>
-            <h2
-              className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-blue-500 to-blue-600 animate-text-glow">
-              Trabajos Recientes</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full"></div>
+            <Titles title="Trabajos Recientes" subtitle="MIS PROYECTOS" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
