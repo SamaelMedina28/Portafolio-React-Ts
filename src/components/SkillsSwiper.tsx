@@ -1,15 +1,15 @@
 import SkillItem from './SkillItem'; 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { skillsData } from '../Data/skillsData';
-import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
 export default function SkillsSwiper() {
   return (
     <Swiper
+    className='mt-16'
       effect="coverflow"
       grabCursor={true}
       centeredSlides={true}
@@ -33,7 +33,7 @@ export default function SkillsSwiper() {
         clickable: true,
         dynamicBullets: true,
       }}
-      navigation={true}
+      navigation={false}
       breakpoints={{
         320: {
           slidesPerView: 1,
@@ -59,7 +59,7 @@ export default function SkillsSwiper() {
           spaceBetween: 30,
         },
       }}
-      modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+      modules={[EffectCoverflow, Pagination, Autoplay]}
       onSwiper={(swiper) => {
         // Agregar efecto hover para pausar autoplay
         const slides = document.querySelectorAll('.swiper-slide');
