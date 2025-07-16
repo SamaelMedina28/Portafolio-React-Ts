@@ -60,7 +60,7 @@ export default function SkillsSwiper() {
         },
       }}
       modules={[EffectCoverflow, Pagination, Autoplay]}
-      onSlideChange={() => console.log('slide change')}
+      // onSlideChange={() => console.log('slide change')}
     >
       {skillsData.map((skill: { name: string; icon: string | React.ReactNode; description: string; }, index: number) => (
         <SwiperSlide key={index}>
