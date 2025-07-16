@@ -18,7 +18,7 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="https://github.com/SamaelMedina28" target="_blank"
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold shadow-lg hover:scale-105 transition duration-300 ease-in-out">
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold shadow-lg hover:scale-105 transition duration-300 ease-in-out space-x-2">
               {/* Icono de GitHub */}
               <i className="fa-brands fa-github"></i>
               <span>GitHub</span>
