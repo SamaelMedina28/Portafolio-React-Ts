@@ -1,5 +1,5 @@
 import Logo from "./ui/Logo";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import NavItem from "./ui/NavItem";
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +9,18 @@ export default function Navbar() {
         setCurrentSection(section);
         setIsOpen(false);
     };
+    const menuRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
     return (
         <nav className="bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-700">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -35,42 +47,48 @@ export default function Navbar() {
                 </div>
 
                 {/* Menú móvil */}
-                <div id="mobile-menu" className="hidden w-full md:hidden" style={{ display: isOpen ? "block" : "none" }}>
-                    <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-800 rounded-lg shadow-lg mt-2 border border-gray-700">
-                        <a href="#"
-                            onClick={() => handleSectionChange("inicio")}
-                            className={`flex items-center px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md group transition-colors duration-200 ${currentSection === "inicio" ? "bg-gray-900" : ""}`}>
-                            <i className="fas fa-home w-5 h-5 mr-3 text-blue-400"></i>
-                            Inicio
-                        </a>
-                        <a href="#sobre-mi"
-                            onClick={() => handleSectionChange("sobre-mi")}
-                            className={`flex items-center px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md group transition-colors duration-200 ${currentSection === "sobre-mi" ? "bg-gray-900" : ""}`}>
-                            <i className="fas fa-user w-5 h-5 mr-3 text-blue-400"></i>
-                            Sobre mí
-                        </a>
-                        <a href="#skills"
-                            onClick={() => handleSectionChange("skills")}
-                            className={`flex items-center px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md group transition-colors duration-200 ${currentSection === "skills" ? "bg-gray-900" : ""}`}>
-                            <i className="fas fa-code w-5 h-5 mr-3 text-blue-400"></i>
-                            Skills
-                        </a>
-                        <a href="#proyectos"
-                            onClick={() => handleSectionChange("proyectos")}
-                            className={`flex items-center px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md group transition-colors duration-200 ${currentSection === "proyectos" ? "bg-gray-900" : ""}`}>
-                            <i className="fas fa-folder-open w-5 h-5 mr-3 text-blue-400"></i>
-                            Proyectos
-                        </a>
-                        <div className="pt-2 px-4">
-                            <a href="#contacto"
+                <div
+                    id="mobile-menu"
+                    className={`w-full md:hidden transition-all duration-300 ease-in-out ${isOpen ? "opacity-100 max-h-[1000px]" : "opacity-0 max-h-0 overflow-hidden"}`}
+                    ref={menuRef}
+                >
+                    <div className="px-4 py-3 space-y-2 bg-[#111827]/95 backdrop-blur-md rounded-xl mt-3 border border-gray-700 shadow-lg shadow-black/20">
+                        {[
+                            { id: "inicio", icon: "fa-home", label: "Inicio" },
+                            { id: "sobre-mi", icon: "fa-user", label: "Sobre mí" },
+                            { id: "skills", icon: "fa-code", label: "Skills" },
+                            { id: "proyectos", icon: "fa-folder", label: "Proyectos" },
+                        ].map(({ id, icon, label }) => (
+                            <a
+                                key={id}
+                                href={`#${id}`}
+                                onClick={() => handleSectionChange(id)}
+                                className={`flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 ${currentSection === id
+                                        ? "text-white bg-gray-700/60"
+                                        : "text-gray-300 hover:text-white hover:bg-gray-700/30"
+                                    }`}
+                            >
+                                <i className={`fas ${icon} w-4 h-4 mr-3 text-blue-400/90`}></i>
+                                {label}
+                            </a>
+                        ))}
+
+                        <div className="pt-2">
+                            <a
+                                href="#contacto"
                                 onClick={() => handleSectionChange("contacto")}
-                                className={`flex items-center justify-center w-full px-4 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 ${currentSection === "contacto" ? "bg-gray-900" : ""}`}>
-                                <i className="fas fa-paper-plane mr-2"></i>
+                                className={`flex items-center justify-center w-full px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 ${currentSection === "contacto"
+                                        ? "bg-blue-600 text-white shadow-inner"
+                                        : "bg-blue-500/90 hover:bg-blue-600 text-white hover:shadow-lg hover:shadow-blue-500/30"
+                                    }`}
+                            >
+                                <i className="fas fa-paper-plane w-4 h-4 mr-2"></i>
                                 Contactar
                             </a>
                         </div>
                     </div>
                 </div>
+
 
                 {/* Menú de escritorio */}
                 <div className="hidden md:flex items-center justify-between w-auto" id="desktop-menu">
