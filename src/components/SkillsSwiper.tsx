@@ -1,0 +1,84 @@
+import SkillItem from './SkillItem'; 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { skillsData } from '../Data/skillsData';
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+export default function SkillsSwiper() {
+  return (
+    <Swiper
+      effect="coverflow"
+      grabCursor={true}
+      centeredSlides={true}
+      slidesPerView="auto"
+      spaceBetween={30}
+      coverflowEffect={{
+        rotate: 10,
+        stretch: 0,
+        depth: 100,
+        modifier: 1.5,
+        slideShadows: false,
+      }}
+      loop={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      }}
+      speed={800}
+      pagination={{
+        clickable: true,
+        dynamicBullets: true,
+      }}
+      navigation={true}
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          },
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      }}
+      modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+      onSwiper={(swiper) => {
+        // Agregar efecto hover para pausar autoplay
+        const slides = document.querySelectorAll('.swiper-slide');
+        slides.forEach((slide) => {
+          slide.addEventListener('mouseenter', () => {
+            swiper.autoplay.stop();
+          });
+          slide.addEventListener('mouseleave', () => {
+            swiper.autoplay.start();
+          });
+        });
+      }}
+      onSlideChange={() => console.log('slide change')}
+    >
+      {skillsData.map((skill: { name: string; icon: string | React.ReactNode; description: string; }, index: number) => (
+        <SwiperSlide key={index}>
+          <SkillItem name={skill.name} icon={skill.icon} description={skill.description} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  )
+}
