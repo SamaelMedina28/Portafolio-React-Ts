@@ -1,7 +1,7 @@
 export const projectsData = [
   {
-    name: "Ignate Branding Company",
-    image_path: "img/projects/ignate.png",
+    name: "Ignite Branding Company",
+    image_path: "img/projects/ignite.png",
     description:
       "Un sitio web moderno y receptivo para una empresa local, con diseño personalizado y optimizado para SEO.",
     technologies: [
@@ -14,8 +14,8 @@ export const projectsData = [
     githubLink: "https://github.com/zepyroth3411/Ignite",
   },
   {
-    name: "CMS Ignite B",
-    image_path: "img/projects/ignate-admin.png",
+    name: "CMS Ignite Branding Company",
+    image_path: "img/projects/ignite-admin.png",
     description:
       "Un sitio web administrativo para la gestion de proyectos de una empresa haciendo su web empresarial autoadministrable.",
     technologies: [
@@ -25,7 +25,7 @@ export const projectsData = [
       { name: "Laravel", color: "red" },
       { name: "Tailwind", color: "cyan" },
     ],
-    githubLink: "https://github.com/zepyroth3411/Ignite",
+    githubLink: "https://github.com/SamaelMedina28/Ignite",
   },
   {
     name: "Costurerias Mariposa",
