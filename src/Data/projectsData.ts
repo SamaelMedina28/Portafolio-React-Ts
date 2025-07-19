@@ -14,6 +14,20 @@ export const projectsData = [
     githubLink: "https://github.com/zepyroth3411/Ignite",
   },
   {
+    name: "CMS Ignite B",
+    image_path: "img/projects/ignate-admin.png",
+    description:
+      "Un sitio web administrativo para la gestion de proyectos de una empresa haciendo su web empresarial autoadministrable.",
+    technologies: [
+      { name: "React", color: "green" },
+      { name: "TypeScript", color: "blue" },
+      { name: "Inertia", color: "purple" },
+      { name: "Laravel", color: "red" },
+      { name: "Tailwind", color: "cyan" },
+    ],
+    githubLink: "https://github.com/zepyroth3411/Ignite",
+  },
+  {
     name: "Costurerias Mariposa",
     image_path: "img/projects/citlaly.png",
     description:
