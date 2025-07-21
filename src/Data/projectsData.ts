@@ -65,6 +65,20 @@ export const projectsData = [
     githubLink: "https://github.com/SamaelMedina28/Proyecto_Floreria",
   },
   {
+    name: "Recetapp | Recetario Digital",
+    image_path: "img/projects/recetario.png",
+    description:
+      "Recetario digital para guardar y administrar recetas de cocina.",
+    technologies: [
+      { name: "Laravel", color: "red" },
+      { name: "MySQL", color: "yellow" },
+      { name: "Livewire", color: "blue" },
+      { name: "Tailwind", color: "sky" },
+      { name: "Jetstream", color: "purple" },
+    ],
+    githubLink: "https://github.com/SamaelMedina28/Proyecto_Recetario",
+  },
+  {
     name: "Horario UABC",
     image_path: "img/projects/horario.png",
     description:
