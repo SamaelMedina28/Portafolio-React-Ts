@@ -5,7 +5,10 @@ import { useState } from "react";
 
 export default function Projects() {
     const [showAll, setShowAll] = useState(false);
-    const initialProjectsCount = 9;
+    let initialProjectsCount = 12;
+    if(window.innerWidth < 768) {
+      initialProjectsCount = 9;
+    }
 
     // Determina qué proyectos mostrar
     const displayedProjects = showAll
@@ -13,7 +16,7 @@ export default function Projects() {
       : projectsData.slice(0, initialProjectsCount);
   return (
     <>
-      <section id="proyectos" className="py-20 pb-5 lg:pb-20 px-6 md:px-12 max-w-7xl mx-auto relative overflow-hidden">
+      <section id="proyectos" className="py-20 pb-5 lg:pb-10 px-6 md:px-12 max-w-7xl mx-auto relative overflow-hidden">
         {/* Efecto de fondo sutil */}
         <div
           className="absolute -bottom-1/4 -right-1/4 w-full h-1/2 bg-gradient-radial from-blue-500/5 to-transparent rounded-full opacity-30">
@@ -34,7 +37,7 @@ export default function Projects() {
       </section>
       <div className="col-span-1 text-center">
         <button id="verMasBtn"
-          className="text-lg font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-blue-300 to-blue-400 animate-text-glow border-blue-400 border-b px-1 "
+          className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-blue-300 to-blue-400 animate-text-glow border-blue-400 border-b px-1 "
           onClick={() => setShowAll(!showAll)}
         >
           {showAll ? "Ver menos" : "Ver más"}
