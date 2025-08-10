@@ -53,32 +53,6 @@ export const projectsData = [
     githubLink: "https://github.com/SamaelMedina28/Framework_MVC",
   },
   {
-    name: "Floreria",
-    image_path: "img/projects/floreria.png",
-    description:
-      "Sitio web para una floreria local, con diseño personalizado y optimizado para SEO.",
-    technologies: [
-      { name: "HTML5", color: "orange" },
-      { name: "CSS3", color: "blue" },
-      { name: "JavaScript", color: "yellow" },
-    ],
-    githubLink: "https://github.com/SamaelMedina28/Proyecto_Floreria",
-  },
-  {
-    name: "Recetapp | Recetario Digital",
-    image_path: "img/projects/recetario.png",
-    description:
-      "Recetario digital para guardar y administrar recetas de cocina.",
-    technologies: [
-      { name: "Laravel", color: "red" },
-      { name: "MySQL", color: "yellow" },
-      { name: "Livewire", color: "blue" },
-      { name: "Tailwind", color: "sky" },
-      { name: "Jetstream", color: "purple" },
-    ],
-    githubLink: "https://github.com/SamaelMedina28/Proyecto_Recetario",
-  },
-  {
     name: "Horario UABC",
     image_path: "img/projects/horario.png",
     description:
@@ -91,6 +65,20 @@ export const projectsData = [
       { name: "Jetstream", color: "purple" },
     ],
     githubLink: "https://github.com/SamaelMedina28/Proyecto_horario_livewire",
+  },
+  {
+    name: "Recetapp | Recetario Digital",
+    image_path: "img/projects/recetario.png",
+    description:
+      "Recetario digital para guardar y administrar recetas de cocina con texto enriquesido y reactividad con Livewire.",
+    technologies: [
+      { name: "Laravel", color: "red" },
+      { name: "MySQL", color: "yellow" },
+      { name: "Livewire", color: "blue" },
+      { name: "Tailwind", color: "sky" },
+      { name: "Jetstream", color: "purple" },
+    ],
+    githubLink: "https://github.com/SamaelMedina28/Proyecto_Recetario",
   },
   {
     name: "Pass Manager",
@@ -106,6 +94,49 @@ export const projectsData = [
     ],
     githubLink: "https://github.com/SamaelMedina28/Proyecto_passmanager",
   },
+  {
+    name: "Floreria",
+    image_path: "img/projects/floreria.png",
+    description:
+      "Sitio web para una floreria local, con diseño personalizado y optimizado para SEO.",
+    technologies: [
+      { name: "HTML5", color: "orange" },
+      { name: "CSS3", color: "blue" },
+      { name: "JavaScript", color: "yellow" },
+    ],
+    githubLink: "https://github.com/SamaelMedina28/Proyecto_Floreria",
+  },
+  {
+    name: "Horario UABC React (Migracion en proceso)",
+    image_path: "img/projects/horario-react.png",
+    description:
+      "Se migro la aplicacion web de Horario UABC a React con Inertia para mejor manejo de datos y reactividad. (En proceso)",
+    technologies: [
+      { name: "Laravel", color: "red" },
+      { name: "MySQL", color: "yellow" },
+      { name: "React", color: "green" },
+      { name: "TypeScript", color: "blue" },
+      { name: "Inertia", color: "purple" },
+      { name: "Tailwind", color: "cyan" },
+    ],
+    githubLink: "https://github.com/SamaelMedina28/Horario-react-inertia",
+  },
+  {
+    name: "API Rest Inventario",
+    image_path: "img/projects/inventario.png",
+    description:
+      "API Rest Full en Laravel, con frontend en React para gestión de inventario con autenticación en JWT practicando filtros, paginacion etc.",
+    technologies: [
+      { name: "Laravel", color: "red" },
+      { name: "MySQL", color: "yellow" },
+      { name: "React", color: "green" },
+      { name: "TypeScript", color: "blue" },
+      { name: "Tailwind", color: "cyan" },
+      { name: "JWT", color: "green" },
+    ],
+    githubLink: "https://github.com/SamaelMedina28/API_Inventario",
+  },
+
   {
     name: "Blog",
     image_path: "img/projects/blog.png",
