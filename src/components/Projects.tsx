@@ -2,18 +2,21 @@ import ProjectItem from "./ProjectItem";
 import { projectsData } from "../Data/projectsData";
 import Titles from "./ui/Titles";
 import { useState } from "react";
+import ProjectModal from "./ProjectModal";
 
 export default function Projects() {
-    const [showAll, setShowAll] = useState(false);
-    let initialProjectsCount = 12;
-    if(window.innerWidth < 768) {
-      initialProjectsCount = 9;
-    }
+  const [showAll, setShowAll] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<typeof projectsData[0] | null>(null);
 
-    // Determina qué proyectos mostrar
-    const displayedProjects = showAll
-      ? projectsData
-      : projectsData.slice(0, initialProjectsCount);
+  let initialProjectsCount = 12;
+  if (window.innerWidth < 768) {
+    initialProjectsCount = 9;
+  }
+
+  // Determina qué proyectos mostrar
+  const displayedProjects = showAll
+    ? projectsData
+    : projectsData.slice(0, initialProjectsCount);
   return (
     <>
       <section id="proyectos" className="py-20 pb-5 lg:pb-10 px-6 md:px-12 max-w-7xl mx-auto relative overflow-hidden">
@@ -27,10 +30,18 @@ export default function Projects() {
             <Titles title="Trabajos Recientes" subtitle="MIS PROYECTOS" />
           </div>
 
+          {/* Contenedor de proyectos */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Ignate Branding Company */}
             {displayedProjects.map((project, index) => (
-              <ProjectItem key={index} name={project.name} image_path={project.image_path} description={project.description} technologies={project.technologies} githubLink={project.githubLink} />
+              <ProjectItem
+                key={index}
+                name={project.name}
+                image_path={project.image_path}
+                description={project.description}
+                technologies={project.technologies}
+                githubLink={project.githubLink}
+                onClick={() => setSelectedProject(project)}
+              />
             ))}
           </div>
         </div>
@@ -43,6 +54,13 @@ export default function Projects() {
           {showAll ? "Ver menos" : "Ver más"}
         </button>
       </div>
+
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </>
   )
 }

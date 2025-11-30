@@ -12,6 +12,8 @@ export const projectsData = [
       { name: "Next.js", color: "purple" },
     ],
     githubLink: "https://github.com/zepyroth3411/Ignite",
+    largeDescription: "",
+    video: "",
   },
   {
     name: "CMS Ignite Branding Company",
@@ -26,6 +28,8 @@ export const projectsData = [
       { name: "Tailwind", color: "cyan" },
     ],
     githubLink: "https://github.com/SamaelMedina28/Ignite",
+    largeDescription: "",
+    video: "",
   },
   {
     name: "Costurerias Mariposa",
@@ -38,6 +42,8 @@ export const projectsData = [
       { name: "JavaScript", color: "yellow" },
     ],
     githubLink: "https://github.com/SamaelMedina28/Citlaly",
+    largeDescription: "",
+    video: "",
   },
   {
     name: "Korbo",
@@ -51,6 +57,8 @@ export const projectsData = [
       { name: "Git", color: "orange" },
     ],
     githubLink: "https://github.com/SamaelMedina28/Framework_MVC",
+    largeDescription: "",
+    video: "",
   },
   {
     name: "Horario UABC",
@@ -65,6 +73,8 @@ export const projectsData = [
       { name: "Jetstream", color: "purple" },
     ],
     githubLink: "https://github.com/SamaelMedina28/Proyecto_horario_livewire",
+    largeDescription: "",
+    video: "",
   },
   {
     name: "Recetapp | Recetario Digital",
@@ -79,6 +89,8 @@ export const projectsData = [
       { name: "Jetstream", color: "purple" },
     ],
     githubLink: "https://github.com/SamaelMedina28/Proyecto_Recetario",
+    largeDescription: "",
+    video: "",
   },
   {
     name: "Pass Manager",
@@ -93,6 +105,8 @@ export const projectsData = [
       { name: "Laravel Excel", color: "green" },
     ],
     githubLink: "https://github.com/SamaelMedina28/Proyecto_passmanager",
+    largeDescription: "",
+    video: "",
   },
   {
     name: "Floreria",
@@ -105,6 +119,8 @@ export const projectsData = [
       { name: "JavaScript", color: "yellow" },
     ],
     githubLink: "https://github.com/SamaelMedina28/Proyecto_Floreria",
+    largeDescription: "",
+    video: "",
   },
   {
     name: "Horario UABC React (Migracion en proceso)",
@@ -120,6 +136,8 @@ export const projectsData = [
       { name: "Tailwind", color: "cyan" },
     ],
     githubLink: "https://github.com/SamaelMedina28/Horario-react-inertia",
+    largeDescription: "",
+    video: "",
   },
   {
     name: "API Rest Inventario",
@@ -135,6 +153,8 @@ export const projectsData = [
       { name: "JWT", color: "green" },
     ],
     githubLink: "https://github.com/SamaelMedina28/API_Inventario",
+    largeDescription: "",
+    video: "",
   },
 
   {
@@ -150,6 +170,8 @@ export const projectsData = [
       { name: "Jetstream", color: "purple" },
     ],
     githubLink: "#",
+    largeDescription: "",
+    video: "",
   },
   {
     name: "Sala de chat",
@@ -164,6 +186,8 @@ export const projectsData = [
       { name: "Livewire", color: "blue" },
     ],
     githubLink: "https://github.com/SamaelMedina28/Laravel-reverb",
+    largeDescription: "",
+    video: "",
   },
   {
     name: "Vetcare",
@@ -177,5 +201,7 @@ export const projectsData = [
       { name: "CSS", color: "sky" },
     ],
     githubLink: "https://github.com/SamaelMedina28/VetCare",
+    largeDescription: "",
+    video: "",
   },
 ];

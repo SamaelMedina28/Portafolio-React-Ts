@@ -1,17 +1,18 @@
-interface TechTagProps {
-    name: string;
-    color: string;
+export interface TechTagProps {
+  name: string;
+  color: string;
 }
 
 interface Props {
-    name: string;
-    image_path: string;
-    description: string;
-    technologies: TechTagProps[];
-    githubLink: string;
+  name: string;
+  image_path: string;
+  description: string;
+  technologies: TechTagProps[];
+  githubLink: string;
+  onClick: () => void;
 }
 
-export default function ProjectItem({ name, image_path, description, technologies, githubLink }: Props) {
+export default function ProjectItem({ name, image_path, description, technologies, githubLink, onClick }: Props) {
   const getColor = (color: string) => {
     switch (color) {
       case "orange":
@@ -35,7 +36,7 @@ export default function ProjectItem({ name, image_path, description, technologie
     }
   };
   return (
-    <div className="project-item">
+    <div className="project-item cursor-pointer" onClick={onClick}>
       <div className="project-card h-full border border-gray-700/50 hover:border-blue-500/50">
         <img src={image_path} alt={name} className="project-image"></img>
         <div className="project-overlay">
@@ -47,7 +48,9 @@ export default function ProjectItem({ name, image_path, description, technologie
             ))}
           </div>
           <a href={githubLink} target="_blank"
-            className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group">
+            className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group"
+            onClick={(e) => e.stopPropagation()} // Previene que se abra el modal al hacer clic en el enlace
+          >
             Ver en GitHub <i
               className="fas fa-external-link-alt ml-2 transform group-hover:translate-x-1 transition-transform"></i>
           </a>
