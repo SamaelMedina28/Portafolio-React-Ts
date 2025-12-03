@@ -1,5 +1,12 @@
 import { useEffect } from 'react';
 import type { TechTagProps } from './ProjectItem';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 interface Project {
   name: string;
@@ -7,6 +14,8 @@ interface Project {
   description: string;
   technologies: TechTagProps[];
   githubLink: string;
+  largeDescription: string;
+  imgsSlider: string[];
 }
 
 interface Props {
@@ -35,7 +44,8 @@ export default function ProjectModal({ project, onClose }: Props) {
     };
   }, []);
 
-  
+  // Imágenes de prueba para el carrusel (usando la imagen del proyecto y algunas de placeholder)
+  const carouselImages = [project.image_path, ...project.imgsSlider];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
@@ -46,7 +56,7 @@ export default function ProjectModal({ project, onClose }: Props) {
       ></div>
 
       {/* Contenedor del modal */}
-      <div className="relative w-full max-w-3xl bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden transform transition-all animate-modal-in flex flex-col max-h-[90vh]">
+      <div className="relative w-full max-w-2xl bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden transform transition-all animate-modal-in flex flex-col max-h-[90vh]">
 
         {/* Botón de cierre */}
         <button
@@ -60,15 +70,33 @@ export default function ProjectModal({ project, onClose }: Props) {
 
         {/* Contenedor de informacion - Desplazable */}
         <div className="overflow-y-auto custom-scrollbar">
-          {/* Encabezado de imagen */}
-          <div className="relative h-64 sm:h-80 w-full">
-            <img
-              src={project.image_path}
-              alt={project.name}
-              className="w-full h-full object-cover"
-            />
-            {/* Gradiente para el texto */}
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+          {/* Encabezado de imagen (Carrusel) */}
+          <div className="relative h-72 sm:h-96 w-full">
+            <Swiper
+              spaceBetween={0}
+              centeredSlides={true}
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              // Que no se pueda deslizar por el usuario
+              navigation={false}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="w-full h-full"
+            >
+              {carouselImages.map((img, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={img}
+                    alt={`${project.name} - Slide ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Gradiente para el texto (dentro de cada slide para que se mantenga sobre la imagen) */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent pointer-events-none"></div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
           {/* Informacion del proyecto */}
@@ -86,8 +114,13 @@ export default function ProjectModal({ project, onClose }: Props) {
 
             {/* Descripcion del proyecto */}
             <div className="prose prose-invert max-w-none">
+              <h3 className="text-xl font-bold text-white mb-2">Descripción</h3>
               <p className="text-gray-300 text-lg leading-relaxed">
-                {project.description}
+                {project.largeDescription}
+              </p>
+              <h3 className="text-xl font-bold text-white mb-2">Aprendizajes</h3>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, similique, veniam, atque dignissimos dolore ipsa id voluptatem suscipit tempore possimus ex quaerat aperiam accusamus molestias dolorem eveniet officia earum. Necessitatibus.
               </p>
             </div>
 
@@ -100,7 +133,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                 className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-lg hover:shadow-blue-500/30"
               >
                 <i className="fab fa-github mr-2 text-xl"></i>
-                Ver Código en GitHub
+                GitHub
               </a>
             </div>
           </div>

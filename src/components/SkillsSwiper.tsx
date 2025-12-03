@@ -1,4 +1,4 @@
-import SkillItem from './SkillItem'; 
+import SkillItem from './SkillItem';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { skillsData } from '../Data/skillsData';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 export default function SkillsSwiper() {
   return (
     <Swiper
-    className='mt-16'
+      className='mt-16'
       effect="coverflow"
       grabCursor={true}
       centeredSlides={true}
@@ -60,7 +60,7 @@ export default function SkillsSwiper() {
         },
       }}
       modules={[EffectCoverflow, Pagination, Autoplay]}
-      // onSlideChange={() => console.log('slide change')}
+    // onSlideChange={() => console.log('slide change')}
     >
       {skillsData.map((skill: { name: string; icon: string | React.ReactNode; description: string; }, index: number) => (
         <SwiperSlide key={index}>

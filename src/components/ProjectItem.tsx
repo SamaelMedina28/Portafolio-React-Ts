@@ -12,7 +12,7 @@ interface Props {
   onClick: () => void;
 }
 
-export default function ProjectItem({ name, image_path, description, technologies, githubLink, onClick }: Props) {
+export default function ProjectItem({ name, image_path, technologies, githubLink, onClick, description }: Props) {
   const getColor = (color: string) => {
     switch (color) {
       case "orange":
