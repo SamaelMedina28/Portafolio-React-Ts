@@ -15,6 +15,7 @@ interface Project {
   technologies: TechTagProps[];
   githubLink: string;
   largeDescription: string;
+  learnings: string;
   imgsSlider: string[];
 }
 
@@ -120,7 +121,7 @@ export default function ProjectModal({ project, onClose }: Props) {
               </p>
               <h3 className="text-xl font-bold text-white mb-2">Aprendizajes</h3>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, similique, veniam, atque dignissimos dolore ipsa id voluptatem suscipit tempore possimus ex quaerat aperiam accusamus molestias dolorem eveniet officia earum. Necessitatibus.
+                {project.learnings}
               </p>
             </div>
 
