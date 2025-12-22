@@ -23,7 +23,7 @@ export default function HeroSection() {
               <i className="fa-brands fa-github"></i>
               <span>GitHub</span>
             </a>
-            <a href="./src/CV_Aziel_Samael_Medina_Galvan.pdf" download
+            <a href="./CV_Aziel_Samael_Medina_Galvan.pdf" download
               className="px-8 py-4 rounded-full border border-slate-600 text-white hover:border-white transition duration-300 flex items-center space-x-2">
               <i className="fa-solid fa-file-pdf"></i>
               <span>Descargar CV</span>
