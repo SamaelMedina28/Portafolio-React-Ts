@@ -54,6 +54,34 @@ export const projectsData = [
     ],
   },
   {
+    name: "Sistema POS Karamelos",
+    image_path: "img/projects/karamelos.png",
+    description:
+      "API Rest para un Sistema de punto de venta para una tienda de dulces con diseño personalizado y optimizado para SEO.",
+    technologies: [
+      { name: "Next.js", color: "orange" },
+      { name: "React", color: "green" },
+      { name: "TypeScript", color: "blue" },
+      { name: "Tailwind", color: "sky" },
+      { name: "Laravel", color: "red" },
+    ],
+    githubLink: "https://github.com/SamaelMedina28/Citlaly",
+    largeDescription:
+      "Desarrollé una API REST en Laravel para un sistema de punto de venta utilizado en una dulcería local llamada Karamelos. El sistema permite realizar ventas de productos por gramaje, gestionar inventario, crear y administrar usuarios con roles diferenciados (administrador y clerk), y llevar un control completo de las operaciones diarias mediante cortes X y Z, ventas por lote y análisis de diferencias entre cortes. La API incluye módulos para: Registro y control de ventas, Gestión de inventario y productos con imágenes, Administración de usuarios y permisos,Historial de lotes y cortes con cálculos automáticos Consulta detallada de ventas individuales y por periodo Se diseñó pensando en reglas de negocio reales, asegurando que la lógica de ventas, cierres y diferencias reflejara el flujo operativo de un punto de venta físico.",
+    learnings:
+      "En este proyecto aprendí a manejar lógica de negocio aplicada a un entorno real, especialmente en el cálculo de ventas, cortes y diferencias. Profundicé en la gestión de imágenes entre backend y frontend mediante serialización Base64, y en la construcción de paginación eficiente para consumo desde React/Next.js. También reforcé el uso de middlewares para proteger rutas tanto en la API como en el frontend, estructurando el acceso según roles y garantizando una comunicación segura entre ambos entornos. Además, consolidé buenas prácticas de programación con Git: estructurar ramas para cada feature, realizar pull requests claros y mantener un historial limpio mediante commits descriptivos y consistentes, mejorando el flujo de colaboración y el control de versiones.",
+    imgsSlider: [
+      "img/projects/karamelos/img1.png",
+      "img/projects/karamelos/img2.png",
+      "img/projects/karamelos/img3.png",
+      "img/projects/karamelos/img4.png",
+      "img/projects/karamelos/img5.png",
+      "img/projects/karamelos/img6.png",
+      "img/projects/karamelos/img7.png",
+      "img/projects/karamelos/img8.png",
+    ],
+  },
+  {
     name: "Costurerias Mariposa",
     image_path: "img/projects/citlaly.png",
     description:
