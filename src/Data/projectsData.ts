@@ -65,7 +65,7 @@ export const projectsData = [
       { name: "Tailwind", color: "sky" },
       { name: "Laravel", color: "red" },
     ],
-    githubLink: "https://github.com/SamaelMedina28/Citlaly",
+    githubLink: "https://github.com/SamaelMedina28/sistema-pos-karamelos",
     largeDescription:
       "Desarrollé una API REST en Laravel para un sistema de punto de venta utilizado en una dulcería local llamada Karamelos. El sistema permite realizar ventas de productos por gramaje, gestionar inventario, crear y administrar usuarios con roles diferenciados (administrador y clerk), y llevar un control completo de las operaciones diarias mediante cortes X y Z, ventas por lote y análisis de diferencias entre cortes. La API incluye módulos para: Registro y control de ventas, Gestión de inventario y productos con imágenes, Administración de usuarios y permisos,Historial de lotes y cortes con cálculos automáticos Consulta detallada de ventas individuales y por periodo Se diseñó pensando en reglas de negocio reales, asegurando que la lógica de ventas, cierres y diferencias reflejara el flujo operativo de un punto de venta físico.",
     learnings:
