@@ -3,55 +3,99 @@ import { Vortex } from "./ui/Vortex";
 export default function HeroSection() {
   return (
     <Vortex
-      backgroundColor="#00000000"
-      baseHue={190}
-      rangeHue={60}
-      particleCount={400}
-      rangeY={600}
-      baseSpeed={0.05}
-      rangeSpeed={1.5}
+      baseHue={200}
+      rangeHue={40}
+      particleCount={500}
+      rangeY={800}
+      baseSpeed={0.03}
+      rangeSpeed={1.2}
       baseRadius={1}
-      rangeRadius={3}>
-      <section className="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-16 animate-fade-in">
-          {/* Left Content */}
-          <div className="lg:w-1/2 space-y-4">
-            <div className="inline-block px-4 py-1 rounded-full bg-black/20 text-sm font-medium animate-pulse">
-              <span className="text-blue-400 font-semibold">✅ Disponible para trabajar</span>
+      rangeRadius={2.5}>
+      <section className="min-h-screen flex items-center justify-center px-6 md:px-12 py-20">
+        <div className="max-w-5xl mx-auto w-full">
+
+          {/* Main Content - Centered */}
+          <div className="space-y-8 text-center">
+
+            {/* Status Badge */}
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 backdrop-blur-sm sm:mt-24 mt-6">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              </span>
+              <span className="text-sm font-semibold text-emerald-400 tracking-wide">
+                Disponible para nuevos proyectos
+              </span>
             </div>
-            <h1
-              className="text-5xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-50 via-blue-500 to-blue-600 animate-text-glow">
-              Full Stack Developer
-            </h1>
-            <span className="text-blue-400 font-semibold px-1 text-lg block">Samael Medina</span>
-            <p className="text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed">
-              Desarrollador Web con casi 3 años de experiencia, especializado en el ecosistema PHP (Laravel, Livewire, Alpine.js) y React con Inertia. Me defino por una mentalidad resolutiva: más allá de dominar herramientas, tengo la capacidad de investigar y encontrar soluciones efectivas para cualquier desafío técnico.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="https://github.com/SamaelMedina28" target="_blank"
-                className="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold shadow-lg hover:scale-105 transition duration-300 ease-in-out space-x-2">
-                {/* Icono de GitHub */}
-                <i className="fa-brands fa-github"></i>
-                <span>GitHub</span>
+
+            {/* Main Heading */}
+            <div className="space-y-5">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+                <span className="block text-white mb-2">Full Stack</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
+                  Developer
+                </span>
+              </h1>
+
+              <div className="flex items-center gap-3 justify-center">
+                <div className="h-1 w-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"></div>
+                <h2 className="text-2xl md:text-3xl font-light text-slate-300">
+                  Samael Medina
+                </h2>
+                <div className="h-1 w-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full"></div>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="space-y-4 max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl text-slate-400 leading-relaxed font-light">
+                <span className="text-white font-semibold">Desarrollador Web</span> con casi 3 años creando experiencias web robustas.
+                Especializado en el ecosistema <span className="text-cyan-400 font-medium">PHP</span> (Laravel, Livewire, Alpine.js) y
+                <span className="text-blue-400 font-medium"> React</span> con Inertia.
+              </p>
+
+              <p className="text-base md:text-lg text-slate-500 leading-relaxed max-w-2xl mx-auto">
+                Mi enfoque va más allá de escribir código: investigo, aprendo y encuentro
+                <span className="text-white font-medium"> soluciones efectivas</span> para cualquier desafío técnico.
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center pt-6">
+              <a
+                href="https://github.com/SamaelMedina28"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-105 flex items-center gap-3 w-full sm:w-auto justify-center overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <i className="fa-brands fa-github text-xl relative z-10"></i>
+                <span className="relative z-10">Ver GitHub</span>
               </a>
-              <a href="./CV_Aziel_Samael_Medina_Galvan.pdf" download
-                className="px-8 py-4 rounded-full border border-slate-600 text-white hover:border-white transition duration-300 flex items-center space-x-2">
-                <i className="fa-solid fa-file-pdf"></i>
+
+              <a
+                href="./CV_Aziel_Samael_Medina_Galvan.pdf"
+                download
+                className="group px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 text-white font-semibold border-2 border-white/10 hover:border-white/30 backdrop-blur-sm transition-all duration-300 flex items-center gap-3 w-full sm:w-auto justify-center"
+              >
+                <i className="fa-solid fa-download text-lg group-hover:animate-bounce"></i>
                 <span>Descargar CV</span>
               </a>
             </div>
+
+
+            {/* Scroll Indicator */}
+            <div className="pt-12 animate-bounce">
+              <div className="inline-flex flex-col items-center gap-2 text-slate-500">
+                <span className="text-xs uppercase tracking-wider font-medium">Scroll</span>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </div>
+            </div>
+
           </div>
 
-          {/* Right Image */}
-          {/* <div className="lg:w-1/2 relative group">
-            <img src="./img/SamaelMedina.jpeg" className="w-full max-w-lg rounded-xl shadow-2xl floating-object" />
-            <div
-              className="absolute -top-16 -left-16 w-40 h-40 rounded-full bg-blue-500/30 blur-3xl animate-pulse-slow">
-            </div>
-            <div
-              className="absolute -bottom-12 -right-3 w-36 h-36 rounded-full bg-blue-500/30 blur-3xl animate-pulse-slow">
-            </div>
-          </div> */}
         </div>
       </section>
     </Vortex>
