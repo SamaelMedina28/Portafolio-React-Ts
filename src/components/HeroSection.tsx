@@ -18,7 +18,7 @@ export default function HeroSection() {
           <div className="space-y-8 text-center">
 
             {/* Status Badge */}
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 backdrop-blur-sm sm:mt-24 mt-6">
+            <div className="hidden sm:inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 backdrop-blur-sm sm:mt-24 mt-6">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
@@ -29,7 +29,7 @@ export default function HeroSection() {
             </div>
 
             {/* Main Heading */}
-            <div className="space-y-5">
+            <div className="space-y-5 mt-12 sm:mt-0">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
                 <span className="block text-white mb-2">Full Stack</span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
@@ -66,7 +66,7 @@ export default function HeroSection() {
                 href="https://github.com/SamaelMedina28"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-105 flex items-center gap-3 w-full sm:w-auto justify-center overflow-hidden"
+                className="group relative px-8 sm:py-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-105 flex items-center gap-3 w-full sm:w-auto justify-center overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <i className="fa-brands fa-github text-xl relative z-10"></i>
@@ -76,7 +76,7 @@ export default function HeroSection() {
               <a
                 href="./CV_Aziel_Samael_Medina_Galvan.pdf"
                 download
-                className="group px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 text-white font-semibold border-2 border-white/10 hover:border-white/30 backdrop-blur-sm transition-all duration-300 flex items-center gap-3 w-full sm:w-auto justify-center"
+                className="group px-8 sm:py-4 py-2 rounded-full bg-white/5 hover:bg-white/10 text-white font-semibold border-2 border-white/10 hover:border-white/30 backdrop-blur-sm transition-all duration-300 flex items-center gap-3 w-full sm:w-auto justify-center"
               >
                 <i className="fa-solid fa-download text-lg group-hover:animate-bounce"></i>
                 <span>Descargar CV</span>
@@ -85,14 +85,14 @@ export default function HeroSection() {
 
 
             {/* Scroll Indicator */}
-            <div className="pt-12 animate-bounce">
+            {/* <div className="pt-12 animate-bounce">
               <div className="inline-flex flex-col items-center gap-2 text-slate-500">
                 <span className="text-xs uppercase tracking-wider font-medium">Scroll</span>
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
               </div>
-            </div>
+            </div> */}
 
           </div>
 
