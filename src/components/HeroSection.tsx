@@ -43,7 +43,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Image */}
-          <div className="lg:w-1/2 relative group">
+          {/* <div className="lg:w-1/2 relative group">
             <img src="./img/SamaelMedina.jpeg" className="w-full max-w-lg rounded-xl shadow-2xl floating-object" />
             <div
               className="absolute -top-16 -left-16 w-40 h-40 rounded-full bg-blue-500/30 blur-3xl animate-pulse-slow">
@@ -51,7 +51,7 @@ export default function HeroSection() {
             <div
               className="absolute -bottom-12 -right-3 w-36 h-36 rounded-full bg-blue-500/30 blur-3xl animate-pulse-slow">
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </Vortex>

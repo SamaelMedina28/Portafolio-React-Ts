@@ -24,7 +24,7 @@ export default function Navbar() {
   }, []);
   return (
     <nav
-      className="bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-700"
+      className="backdrop-blur fixed w-full z-20 top-0 start-0 border-b border-gray-700"
       ref={menuRef}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -58,7 +58,7 @@ export default function Navbar() {
                 aria-hidden="true"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="#fff"
               >
                 <path
                   strokeLinecap="round"
@@ -79,7 +79,7 @@ export default function Navbar() {
             : "opacity-0 max-h-0 overflow-hidden"
             }`}
         >
-          <div className="px-4 py-3 space-y-5 bg-[#111827]/95 backdrop-blur-md rounded-xl mt-3 border border-gray-700 shadow-lg shadow-black/20">
+          <div className="px-4 py-3 space-y-5 bg-[#111827]/60 backdrop-blur-md rounded-xl mt-3 border border-gray-700 shadow-lg shadow-black/20">
             {[
               { id: "", icon: "fa-home", label: "Inicio" },
               { id: "sobre-mi", icon: "fa-user", label: "Sobre mí" },
