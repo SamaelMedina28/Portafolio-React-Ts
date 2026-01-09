@@ -18,7 +18,7 @@ export default function HeroSection() {
           <div className="space-y-8 text-center">
 
             {/* Status Badge */}
-            <div className="hidden sm:inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 backdrop-blur-sm sm:mt-24 mt-6">
+            <div className="hidden sm:inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 backdrop-blur-sm mt-6 sm:mt-16">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
@@ -48,13 +48,13 @@ export default function HeroSection() {
 
             {/* Description */}
             <div className="space-y-4 max-w-3xl mx-auto">
-              <p className="text-lg md:text-xl text-slate-400 leading-relaxed font-light">
+              <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-light">
                 <span className="text-white font-semibold">Desarrollador Web</span> con casi 3 años creando experiencias web robustas.
                 Especializado en el ecosistema <span className="text-cyan-400 font-medium">PHP</span> (Laravel, Livewire, Alpine.js) y
                 <span className="text-blue-400 font-medium"> React</span> con Inertia.
               </p>
 
-              <p className="text-base md:text-lg text-slate-500 leading-relaxed max-w-2xl mx-auto">
+              <p className="text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto">
                 Mi enfoque va más allá de escribir código: investigo, aprendo y encuentro
                 <span className="text-white font-medium"> soluciones efectivas</span> para cualquier desafío técnico.
               </p>

@@ -39,8 +39,7 @@ export default function SobreMi() {
 
           <div className="mt-8">
             <a href="#contacto"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-1">
-              <i className="fas fa-paper-plane mr-2"></i>
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-1">
               Hablemos de tu proyecto
             </a>
           </div>

@@ -107,7 +107,6 @@ export default function Navbar() {
                 href="#contacto"
                 onClick={() => handleSectionChange("contacto")}
                 className="flex items-center justify-center w-full px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 bg-linear-to-r from-cyan-500 to-blue-600 text-white shadow-inner">
-                <i className="fas fa-paper-plane w-4 h-4 mr-2"></i>
                 Contactar
               </a>
             </div>

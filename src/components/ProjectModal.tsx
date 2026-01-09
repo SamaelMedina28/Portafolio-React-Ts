@@ -131,7 +131,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-lg hover:shadow-blue-500/30"
+                className="inline-flex items-center px-6 py-3 bg-linear-to-r from-cyan-500 to-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-colors shadow-lg hover:shadow-blue-500/30"
               >
                 <i className="fab fa-github mr-2 text-xl"></i>
                 GitHub
