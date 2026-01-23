@@ -5,7 +5,7 @@ export default function HeroSection() {
     <Vortex
       baseHue={200}
       rangeHue={40}
-      particleCount={200}
+      particleCount={100}
       rangeY={600}
       baseSpeed={0.03}
       rangeSpeed={1.2}
