@@ -38,11 +38,11 @@ export default function HeroSection() {
               </h1>
 
               <div className="flex items-center gap-3 justify-center">
-                <div className="h-1 w-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"></div>
+                {/* <div className="h-1 w-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"></div> */}
                 <h2 className="text-2xl md:text-3xl font-light text-slate-300">
                   Samael Medina
                 </h2>
-                <div className="h-1 w-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full"></div>
+                {/* <div className="h-1 w-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full"></div> */}
               </div>
             </div>
 
@@ -66,9 +66,9 @@ export default function HeroSection() {
                 href="https://github.com/SamaelMedina28"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative px-8 sm:py-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-105 flex items-center gap-3 w-full sm:w-auto justify-center overflow-hidden"
+                className="group relative px-8 sm:py-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 flex items-center gap-3 w-full sm:w-auto justify-center overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
                 <i className="fa-brands fa-github text-xl relative z-10"></i>
                 <span className="relative z-10">Ver GitHub</span>
               </a>
