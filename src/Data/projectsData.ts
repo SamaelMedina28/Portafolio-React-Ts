@@ -1,5 +1,36 @@
 export const projectsData = [
   {
+    name: "Cimafood",
+    image_path: "img/projects/cimafood.png",
+    description:
+      "Plataforma web centralizada para venta de comida entre estudiantes, con gestión de negocios, pedidos y búsqueda avanzada.",
+    technologies: [
+      { name: "Laravel", color: "red" },
+      { name: "Livewire", color: "blue" },
+      { name: "Tailwind", color: "cyan" },
+      { name: "MySQL", color: "green" },
+      { name: "Alpine.js", color: "yellow" },
+      { name: "PHP", color: "purple" },
+    ],
+    githubLink: "https://github.com/SamaelMedina28/cimafood",
+    largeDescription:
+      "Cimafood es una plataforma web centralizada orientada a la venta de comida entre estudiantes. El sistema permite administrar múltiples negocios, productos y pedidos dentro de una sola aplicación, ofreciendo herramientas de búsqueda, filtrado y sistema de calificaciones. Uno de los principales retos del proyecto fue diseñar una lógica que permitiera dividir un mismo pedido entre diferentes negocios, asegurando que cada vendedor recibiera únicamente los productos correspondientes a su orden. Además, se implementaron funcionalidades como carrito global, calificacion de negocios, favoritos y control de acceso mediante middlewares, manteniendo una arquitectura organizada y escalable basada en Laravel y Livewire.",
+    learnings:
+      "Este proyecto me permitió trabajar con una base de datos más compleja y relaciones de mayor escala dentro de Laravel. Aprendí a desarrollar un carrito global compartido en toda la aplicación, mejorar el manejo de eventos y reactividad utilizando Livewire y Alpine.js, e implementar middlewares para proteger rutas y controlar accesos. También desarrollé lógica para dividir pedidos entre múltiples negocios, de forma que cada vendedor recibiera únicamente la información relevante de su venta. Además, reforcé conocimientos en búsquedas con filtros, sistema de favoritos y organización de funcionalidades dentro de una aplicación web más robusta y modular.",
+    imgsSlider: [
+      "img/projects/cimafood/img1.png",
+      "img/projects/cimafood/img2.png",
+      "img/projects/cimafood/img3.png",
+      "img/projects/cimafood/img4.png",
+      "img/projects/cimafood/img5.png",
+      "img/projects/cimafood/img6.png",
+      "img/projects/cimafood/img7.png",
+      "img/projects/cimafood/img8.png",
+      "img/projects/cimafood/img9.png",
+      "img/projects/cimafood/img10.png"
+    ],
+  },
+  {
     name: "Ignite Branding Company",
     image_path: "img/projects/ignite.png",
     description:
