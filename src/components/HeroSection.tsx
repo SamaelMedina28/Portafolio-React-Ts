@@ -18,7 +18,7 @@ export default function HeroSection() {
           <div className="space-y-8 text-center">
 
             {/* Status Badge */}
-            <div className="hidden sm:inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 backdrop-blur-sm mt-6 sm:mt-16">
+            <div className="hidden sm:inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20 backdrop-blur-sm">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
@@ -61,7 +61,7 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center pt-6">
+            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center ">
               <a
                 href="https://github.com/SamaelMedina28"
                 target="_blank"
