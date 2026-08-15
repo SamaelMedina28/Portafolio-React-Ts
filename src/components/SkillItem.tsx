@@ -1,19 +1,20 @@
-
 type Props = {
   name: string;
   icon: string | React.ReactNode;
   description: string;
 }
+
 export default function SkillItem({ name, icon, description }: Props) {
   return (
-    <div
-      className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 h-full flex flex-col items-center justify-center group">
-      <div
-        className="w-24 h-24 bg-gray-700/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-        {icon}
+    <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl hover:border-zinc-500 transition-colors duration-300 h-full flex flex-col items-center justify-center group">
+      <div className="w-20 h-20 bg-zinc-950 border border-zinc-800 rounded-xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300 shadow-sm">
+        <div className="text-zinc-300 group-hover:text-white transition-colors duration-300">
+          {icon}
+        </div>
       </div>
-      <h3 className="text-2xl font-bold text-white mb-2">{name}</h3>
-      <p className="text-slate-300 text-center">{description}
+      <h3 className="text-xl font-bold text-zinc-100 mb-3">{name}</h3>
+      <p className="text-zinc-500 text-sm text-center leading-relaxed font-light">
+        {description}
       </p>
     </div>
   )

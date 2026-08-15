@@ -1,4 +1,14 @@
 @import "tailwindcss";
+
+@theme {
+  --color-zinc-950: #09090b;
+}
+
 * {
-    font-family: 'Jost', sans-serif;
+  font-family: 'Jost', sans-serif;
+}
+
+body {
+  background-color: var(--color-zinc-950);
+  color: white;
 }

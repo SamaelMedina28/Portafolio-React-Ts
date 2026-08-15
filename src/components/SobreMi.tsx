@@ -2,44 +2,35 @@ import Titles from "./ui/Titles";
 
 export default function SobreMi() {
   return (
-    <section id="sobre-mi" className="py-24 px-6 md:px-12 max-w-4xl mx-auto relative overflow-hidden">
-      {/* Efecto de fondo sutil */}
-      <div
-        className="absolute -top-1/4 -right-1/4 w-full h-full bg-gradient-radial from-blue-500/5 to-transparent rounded-full opacity-30">
-      </div>
-      <div
-        className="absolute -bottom-1/4 -left-1/4 w-full h-full bg-gradient-radial from-blue-500/5 to-transparent rounded-full opacity-20">
-      </div>
-
-      <div className="relative z-10 text-center">
+    <section id="sobre-mi" className="py-24 px-6 md:px-12 max-w-4xl mx-auto">
+      <div className="text-center">
         <Titles title="Sobre Mí" subtitle="MI HISTORIA"/>
 
-        <div
-          className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-blue-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10">
-          <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-            Soy un apasionado desarrollador Full Stack con una gran curiosidad por la tecnología y el
-            aprendizaje continuo.
-            Aunque mi experiencia profesional es limitada, he dedicado incontables horas a perfeccionar mis
-            habilidades
-            a través de proyectos personales y formación autodidacta.
-          </p>
-          <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-            Mi enfoque se centra en crear soluciones digitales limpias, eficientes y centradas en el usuario.
-            Disfruto enfrentándome a nuevos desafíos y encontrando formas innovadoras de resolver problemas
-            a través del código.
-          </p>
-
-          <div className="bg-gray-700/30 p-6 rounded-xl border border-gray-600/30">
-            <h3 className="text-xl font-semibold mb-4 text-blue-400">Mi filosofía</h3>
-            <p className="text-slate-300 italic">
-              "No soy un experto en todo, pero tengo la determinación y la capacidad de aprender cualquier
-              tecnología que se requiera."
+        <div className="mt-12 bg-zinc-900/80 border border-zinc-800 p-8 md:p-12 rounded-2xl text-left">
+          <div className="space-y-6 text-lg text-zinc-400 leading-relaxed font-light">
+            <p>
+              Soy un apasionado desarrollador Full Stack con una gran curiosidad por la tecnología y el
+              aprendizaje continuo. Aunque mi experiencia profesional está comenzando, he dedicado incontables horas a perfeccionar mis
+              habilidades a través de proyectos desafiantes y formación autodidacta constante.
+            </p>
+            <p>
+              Mi enfoque se centra en crear soluciones digitales limpias, eficientes y verdaderamente centradas en el usuario.
+              Disfruto enfrentándome a nuevos retos y encontrando formas innovadoras de resolver problemas
+              a través del código, priorizando siempre la calidad y el rendimiento.
             </p>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-10 bg-zinc-950/50 p-6 rounded-xl border border-zinc-800/50">
+            <h3 className="text-sm font-semibold mb-3 text-zinc-300 uppercase tracking-widest">Mi filosofía</h3>
+            <p className="text-zinc-500 italic">
+              "No soy un experto en todo, pero tengo la determinación y la capacidad analítica para aprender y dominar cualquier
+              tecnología que el proyecto requiera."
+            </p>
+          </div>
+
+          <div className="mt-10 flex justify-center md:justify-start">
             <a href="#contacto"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-1">
+              className="inline-flex items-center px-8 py-3 bg-white text-zinc-950 font-semibold rounded-lg hover:bg-zinc-200 transition-colors">
               Hablemos de tu proyecto
             </a>
           </div>

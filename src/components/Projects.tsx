@@ -17,41 +17,36 @@ export default function Projects() {
   const displayedProjects = showAll
     ? projectsData
     : projectsData.slice(0, initialProjectsCount);
+
   return (
     <>
-      <section id="proyectos" className="py-20 pb-5 lg:pb-10 px-6 md:px-12 max-w-7xl mx-auto relative overflow-hidden">
-        {/* Efecto de fondo sutil */}
-        <div
-          className="absolute -bottom-1/4 -right-1/4 w-full h-1/2 bg-gradient-radial from-blue-500/5 to-transparent rounded-full opacity-30">
+      <section id="proyectos" className="py-20 pb-5 lg:pb-10 px-6 md:px-12 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <Titles title="Trabajos Recientes" subtitle="MIS PROYECTOS" />
         </div>
 
-        <div className="relative z-10">
-          <div className="text-center mb-16">
-            <Titles title="Trabajos Recientes" subtitle="MIS PROYECTOS" />
-          </div>
-
-          {/* Contenedor de proyectos */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {displayedProjects.map((project, index) => (
-              <ProjectItem
-                key={index}
-                name={project.name}
-                image_path={project.image_path}
-                description={project.description}
-                technologies={project.technologies}
-                githubLink={project.githubLink}
-                onClick={() => setSelectedProject(project)}
-              />
-            ))}
-          </div>
+        {/* Contenedor de proyectos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {displayedProjects.map((project, index) => (
+            <ProjectItem
+              key={index}
+              name={project.name}
+              image_path={project.image_path}
+              description={project.description}
+              technologies={project.technologies}
+              githubLink={project.githubLink}
+              onClick={() => setSelectedProject(project)}
+            />
+          ))}
         </div>
       </section>
-      <div className="col-span-1 text-center">
+
+      <div className="col-span-1 text-center mt-8">
         <button id="verMasBtn"
-          className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-blue-300 to-blue-400 animate-text-glow border-blue-400 border-b px-1 "
+          className="text-sm font-medium text-zinc-400 hover:text-white border-b border-zinc-700 hover:border-zinc-400 transition-colors pb-1"
           onClick={() => setShowAll(!showAll)}
         >
-          {showAll ? "Ver menos" : "Ver más"}
+          {showAll ? "VER MENOS PROYECTOS" : "VER MÁS PROYECTOS"}
         </button>
       </div>
 
