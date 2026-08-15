@@ -1,5 +1,36 @@
 export const projectsData = [
   {
+    name: "CRM Costureria",
+    image_path: "img/projects/crm-costureria.png",
+    description:
+      "Plataforma web para la administración de clientes, pedidos, entregas e inventario de un negocio local de costurería.",
+    technologies: [
+      { name: "Express Js", color: "green" },
+      { name: "Typescript", color: "blue" },
+      { name: "Docker", color: "dark-blue" },
+      { name: "Mongo DB", color: "dark-green" },
+      { name: "Next Js", color: "purple" },
+      { name: "Tailwind", color: "cyan" },
+    ],
+    githubLink: "https://github.com/SamaelMedina28/CRM-Costureria",
+    largeDescription:
+      "CRM web desarrollado para centralizar la administración de un negocio local de costurería. El sistema permite gestionar clientes, registrar y dar seguimiento a pedidos, administrar entregas y controlar el inventario de telas disponibles. Al momento de crear un pedido, es posible seleccionar telas existentes en el inventario o registrar telas que necesitan ser compradas, facilitando la planificación de materiales y el seguimiento de cada trabajo.",
+
+    learnings:
+      "Este proyecto me permitió aprender a trabajar con MongoDB utilizando Docker y Mongoose como ORM para el modelado y manejo de datos. También reforcé el desarrollo de APIs con Express y TypeScript, implementando validaciones de backend mediante express-validator para garantizar la integridad de la información recibida. Además, trabajé en el diseño de modelos y relaciones entre clientes, pedidos, entregas e inventario, desarrollando una lógica orientada a las necesidades específicas de un negocio real.",
+
+    imgsSlider: [
+      "img/projects/crm-costureria/img1.png",
+      "img/projects/crm-costureria/img2.png",
+      "img/projects/crm-costureria/img3.png",
+      "img/projects/crm-costureria/img4.png",
+      "img/projects/crm-costureria/img5.png",
+      "img/projects/crm-costureria/img6.png",
+      "img/projects/crm-costureria/img7.png",
+      "img/projects/crm-costureria/img8.png",
+    ],
+  },
+  {
     name: "Cimafood",
     image_path: "img/projects/cimafood.png",
     description:
@@ -27,7 +58,7 @@ export const projectsData = [
       "img/projects/cimafood/img7.png",
       "img/projects/cimafood/img8.png",
       "img/projects/cimafood/img9.png",
-      "img/projects/cimafood/img10.png"
+      "img/projects/cimafood/img10.png",
     ],
   },
   {
