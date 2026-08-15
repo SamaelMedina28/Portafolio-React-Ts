@@ -1,5 +1,30 @@
 export const projectsData = [
   {
+    name: "CLI Vane",
+    image_path: "img/projects/cli-vane.png",
+    description:
+      "CLI de desarrollo y Starter Template para Express.js, diseñada para automatizar la generación de arquitectura modular con Prisma y Zod.",
+    technologies: [
+      { name: "Node.js", color: "green" },
+      { name: "Typescript", color: "blue" },
+      { name: "Express", color: "cyan" },
+    ],
+    githubLink: "https://github.com/SamaelMedina28/Vane",
+    largeDescription:
+      "Vane es un ecosistema compuesto por un Starter Template para Express.js y una herramienta CLI propia que automatiza la creación de componentes bajo una arquitectura modular. Inspirada en generadores como Artisan, la CLI analiza directamente el esquema de Prisma (schema.prisma) para construir automáticamente módulos completos (controllers, services, routes y validaciones de Zod dinámicas) acordes al modelo detectado. Además, cuenta con autenticación basada en JWT almacenados en cookies HttpOnly y un sistema de enlace ejecutable global superrápido mediante pnpm link.",
+    learnings:
+      "En este proyecto aprendí a crear herramientas de línea de comandos (CLI) ejecutables en Node.js mediante Shebangs y el enlace de binarios del sistema operativo. Desarrollé lógica para parsear e inspeccionar dinámicamente esquemas de Prisma ORM, generando código tipado y validaciones de Zod al vuelo. También reforcé la arquitectura modular de software en backend, la implementación de seguridad en cookies HttpOnly para prevenir ataques XSS, y la optimización de entornos de construcción distinguiendo comandos de desarrollo local contra compilaciones para entornos de producción.",
+    imgsSlider: [
+      "img/projects/cli-vane/img2.png",
+      "img/projects/cli-vane/img3.png",
+      "img/projects/cli-vane/img4.png",
+      "img/projects/cli-vane/img5.png",
+      "img/projects/cli-vane/img6.png",
+      "img/projects/cli-vane/img7.png",
+      "img/projects/cli-vane/img8.png",
+    ],
+  },
+  {
     name: "CRM Costureria",
     image_path: "img/projects/crm-costureria.png",
     description:
