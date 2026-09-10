@@ -7,7 +7,7 @@ type Props = {
 export default function NavItem({ section, currentSection, handleSectionChange }: Props) {
   let hash = section.toLowerCase();
   if(section === "Inicio") {
-    hash = "";
+    hash = "inicio";
   }else if(section === "Sobre mí") {
     hash = "sobre-mi";
   }
