@@ -18,7 +18,7 @@ export default function useScrollReveal() {
         animation.onfinish = () => animations.delete(animation);
       });
     }, { threshold: 0.08 });
-    document.querySelectorAll('.section-intro, .project-case, .about-layout > *, .skills-layout > .section-heading, .skill-groups > div, .contact-layout > *, .footer-top').forEach(element => observer.observe(element));
+    document.querySelectorAll('.section-intro, .project-case, .about-layout > *, .experience-layout > .section-heading, .experience-entry, .skills-layout > .section-heading, .skill-groups > div, .contact-layout > *, .footer-top').forEach(element => observer.observe(element));
     const stopAnimations = () => {
       if (preference.matches) {
         animations.forEach(animation => animation.cancel());

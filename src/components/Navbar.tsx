@@ -3,7 +3,7 @@ import { ArrowUpRight, Menu, X } from 'lucide-react';
 import Logo from './ui/Logo';
 import ThemeToggle from './ui/ThemeToggle';
 
-const links = [['proyectos', 'Proyectos'], ['sobre-mi', 'Sobre mí'], ['skills', 'Habilidades'], ['contacto', 'Contacto']];
+const links = [['proyectos', 'Proyectos'], ['sobre-mi', 'Sobre mí'], ['experiencia', 'Experiencia'], ['skills', 'Habilidades'], ['contacto', 'Contacto']];
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   useEffect(() => {

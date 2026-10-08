@@ -58,7 +58,7 @@ export default function Contact() {
   };
   return (
     <section id="contacto" className="contact-section"><div className="page-width contact-layout">
-      <div><Titles title="Hablemos de lo que sigue." subtitle="04 / CONTACTO" />
+      <div><Titles title="Hablemos de lo que sigue." subtitle="05 / CONTACTO" />
         <p className="contact-description">Si buscas un desarrollador para tu equipo o tienes un proyecto en mente, cuéntame qué necesitas.</p>
         <a className="contact-email" href="mailto:samaelortiz2218@gmail.com">samaelortiz2218@gmail.com ↗</a>
         <div className="contact-networks"><a href="https://www.linkedin.com/in/samael-medina-011880355/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://wa.me/526648371372" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div>
