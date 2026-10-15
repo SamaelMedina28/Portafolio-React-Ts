@@ -1,44 +1,40 @@
 <!doctype html>
-<html lang="es">
-
-<head>
-  <meta charset="UTF-8" />
-  <script>
-    (() => {
-      let theme;
-      try { theme = localStorage.getItem('devcode-theme'); } catch {}
-      document.documentElement.dataset.theme = theme === 'dark' || theme === 'light'
-        ? theme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    })();
-  </script>
-  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samael Medina — Desarrollador Full Stack</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <meta name="description" content="Portfolio de un desarrollador web con experiencia en Laravel, Livewire, Alpine.js y React con Inertia.">
-  <meta name="keywords" content="desarrollador web, portfolio, Laravel, Livewire, Alpine.js, React, Inertia, Samael Medina, Frontend, Backend, Desarrollador web, Desarrollador frontend, Desarrollador backend">
-  <meta name="author" content="Samael Medina">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="es">
-  <meta name="distribution" content="global">
-  <meta name="rating" content="general">
-  <meta name="revisit-after" content="7 days">
-  <meta name="identifier-urls" content="https://devcode.com">
-  <meta name="copyright" content="Samael Medina">
-  <link rel="stylesheet" href="./src/index.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <div id="root" class="min-h-screen"></div>
-  <!-- <script src="./script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script> -->
-  <script type="module" src="/src/main.tsx"></script>
-</body>
-
+<html lang="es" data-theme="ethereal">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const allowedThemes = ['ethereal', 'tokyo-night', 'osaka-jade', 'gruvbox', 'flexoki-light'];
+        let theme = 'ethereal';
+        try {
+          const saved = localStorage.getItem('devcode-omarchy-theme-v2');
+          const previous = localStorage.getItem('devcode-omarchy-theme') || localStorage.getItem('devcode-theme');
+          if (allowedThemes.includes(saved)) theme = saved;
+          else if (previous === 'light') theme = 'flexoki-light';
+          else if (previous === 'tokyo-night') theme = 'ethereal';
+          else if (allowedThemes.includes(previous)) theme = previous;
+          localStorage.setItem('devcode-omarchy-theme-v2', theme);
+        } catch {}
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme === 'flexoki-light' ? 'light' : 'dark';
+      })();
+    </script>
+    <title>Samael Medina — Desarrollador Full Stack</title>
+    <meta name="description" content="Portafolio de Samael Medina, desarrollador Full Stack en Tijuana, México. Proyectos web con React, TypeScript, Laravel y Livewire." />
+    <meta name="author" content="Samael Medina" />
+    <meta name="robots" content="index, follow" />
+    <meta name="color-scheme" content="dark light" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:title" content="Samael Medina — Desarrollador Full Stack" />
+    <meta property="og:description" content="Desarrollo web desde Tijuana, México. Conoce mis proyectos, experiencia y herramientas." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;450;500;600;700&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

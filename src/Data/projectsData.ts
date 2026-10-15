@@ -423,8 +423,6 @@ export const projectsData = [
       "img/projects/laravel-reverb/img2.png",
       "img/projects/laravel-reverb/img3.png",
       "img/projects/laravel-reverb/img4.png",
-      "img/projects/laravel-reverb/img5.png",
-      "img/projects/laravel-reverb/img6.png",
     ],
   },
   {
