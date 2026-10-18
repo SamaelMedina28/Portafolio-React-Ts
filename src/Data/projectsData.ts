@@ -1,5 +1,64 @@
 export const projectsData = [
   {
+    name: "Sistema Integral de Soporte Técnico",
+    image_path: "img/projects/soporte-tecnico/img3.png",
+    description:
+      "Plataforma full stack para la gestión de tickets, bitácoras, inventario y reportes del área de soporte técnico de la FCQI-UABC.",
+    technologies: [
+      { name: "Next.js", color: "purple" },
+      { name: "Express", color: "green" },
+      { name: "TypeScript", color: "blue" },
+      { name: "PostgreSQL", color: "dark-blue" },
+      { name: "Prisma", color: "cyan" },
+      { name: "Docker", color: "sky" },
+    ],
+    githubLink: "https://github.com/SamaelMedina28/Back-End-SIST",
+    largeDescription:
+      "Sistema Integral de Soporte Técnico desarrollado para la Facultad de Ciencias Químicas e Ingeniería (FCQI) de la UABC. Está compuesto por una API REST modular en Express 5 con TypeScript estricto, Prisma y PostgreSQL, y un frontend independiente en Next.js. Los usuarios inician sesión con su cuenta institucional de Google y, según su rol, pueden levantar tickets de soporte, asignarlos a miembros del equipo y darles seguimiento a través de un flujo de estados controlado. Además incluye bitácora de actividades con participantes, inventario de equipos, administración de categorías y miembros de soporte, un dashboard con métricas, reportes y notificaciones por correo mediante un worker en segundo plano. La API está documentada con OpenAPI/Swagger y el frontend genera sus tipos directamente a partir de ese contrato.",
+    learnings:
+      "Este es el proyecto más completo que he construido. Aprendí a implementar Google OAuth con PKCE y estado firmado, restringiendo el acceso a dominios institucionales y manejando la sesión con JWT en cookies HttpOnly, incluyendo un flujo de onboarding para completar el perfil. Diseñé un control de acceso por roles y extraje las transiciones de estado de los tickets a un módulo de políticas con pruebas unitarias, lo que hizo la lógica de negocio más clara y verificable. En el backend profundicé en Prisma con PostgreSQL, migraciones versionadas, seeds idempotentes, validación con Zod, workers de notificaciones con reintentos y bloqueo, y Docker multi-stage para producción. En el frontend trabajé con Next.js 16, TanStack Query para el estado del servidor, React Hook Form con Zod y tipos generados desde OpenAPI con openapi-typescript y openapi-fetch, lo que mantiene sincronizados el contrato de la API y la interfaz. También reforcé las pruebas con Vitest y Testing Library y la documentación técnica del sistema.",
+    imgsSlider: [
+      "img/projects/soporte-tecnico/img1.png",
+      "img/projects/soporte-tecnico/img2.png",
+      "img/projects/soporte-tecnico/img3.png",
+      "img/projects/soporte-tecnico/img4.png",
+      "img/projects/soporte-tecnico/img5.png",
+      "img/projects/soporte-tecnico/img6.png",
+      "img/projects/soporte-tecnico/img7.png",
+      "img/projects/soporte-tecnico/img8.png",
+      "img/projects/soporte-tecnico/img9.png",
+      "img/projects/soporte-tecnico/img10.png",
+    ],
+  },
+  {
+    name: "SMIG · Análisis de cobertura PDUCPT",
+    image_path: "img/projects/smig-pducpt.png",
+    description:
+      "Módulo de cartografía para el IMPLAN Tijuana que importa un polígono, lo cruza con las capas del PDUCPT y calcula la superficie de uso de suelo por categoría.",
+    technologies: [
+      { name: "Next.js", color: "purple" },
+      { name: "TypeScript", color: "blue" },
+      { name: "Python", color: "yellow" },
+      { name: "FastAPI", color: "green" },
+      { name: "PostGIS", color: "dark-blue" },
+      { name: "GeoServer", color: "orange" },
+      { name: "MapLibre", color: "cyan" },
+    ],
+    githubLink: "#",
+    largeDescription:
+      "Desarrollé, como responsable principal, el módulo de análisis de cobertura del SMIG (Sistema Municipal de Información Geográfica) del Instituto Metropolitano de Planeación de Tijuana, dentro de la sección de Cartografía del PDUCPT 2025–2040 (Programa de Desarrollo Urbano del Centro de Población de Tijuana). Sobre un visor de mapas en Next.js con MapLibre, que muestra las capas oficiales publicadas como WMS desde GeoServer, diseñé y construí la funcionalidad para importar un polígono propio (KML, KMZ, GeoJSON, GPX o Shapefile en ZIP) y analizarlo contra la capa activa. El análisis lo resuelve un microservicio independiente en Python con FastAPI y PostGIS: detecta qué objetos de la capa de la base de datos intersectan con el área importada, agrupa los resultados por clasificación (por ejemplo, cada categoría de uso de suelo o zonificación) y devuelve la superficie en m² y el porcentaje que ocupa cada una dentro del polígono, sin contar dos veces las áreas superpuestas. Si una capa falla, el resto de resultados se conserva y el usuario puede cancelar el cálculo en cualquier momento.",
+    learnings:
+      "El mayor reto fue el rendimiento con geometrías reales: hay capas con cientos de miles o incluso millones de vértices en las que una intersección directa agotaba el tiempo o la memoria de la base de datos. Para resolverlo calculo primero la complejidad de los candidatos (número de vértices) y, cuando supera cierto umbral, divido el área importada en una cuadrícula de 8×8 o 16×16, recortando por franjas y luego por celdas con ST_ClipByBox2D para no recorrer la geometría completa en cada celda. Después reparo solo las geometrías que quedan inválidas tras el recorte con ST_MakeValid, disuelvo por celda y clasificación, y sumo áreas disjuntas para obtener el total sin duplicar superficie. También aprendí a trabajar en el sistema de referencia original de cada capa y reproyectar a UTM 11N únicamente para medir, a usar filtros espaciales, timeouts por consulta y conexiones de solo lectura, y a validar todo con pruebas de regresión geométrica (huecos, multipartes, solapamientos y bordes). En el frontend reforcé el manejo de peticiones largas con AbortController, el parseo de formatos geoespaciales y la presentación paginada de resultados.",
+    imgsSlider: [
+      "img/projects/smig-pducpt/img1.png",
+      "img/projects/smig-pducpt/img2.png",
+      "img/projects/smig-pducpt/img3.png",
+      "img/projects/smig-pducpt/img4.png",
+      "img/projects/smig-pducpt/img5.png",
+      "img/projects/smig-pducpt/img6.png",
+    ],
+  },
+  {
     name: "CLI Vane",
     image_path: "img/projects/cli-vane.png",
     description:

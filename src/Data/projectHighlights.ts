@@ -1,4 +1,12 @@
 export const projectHighlights: Record<string, { category: string; title: string; role: string; contribution: string }> = {
+  'Sistema Integral de Soporte Técnico': {
+    category: 'UNIVERSIDAD · SOPORTE TÉCNICO', title: 'Soporte Técnico FCQI', role: 'Desarrollo full stack',
+    contribution: 'Tickets con flujo de estados y asignaciones, bitácora, inventario y reportes. Acceso con Google institucional y permisos por rol.',
+  },
+  'SMIG · Análisis de cobertura PDUCPT': {
+    category: 'GOBIERNO · CARTOGRAFÍA Y SIG', title: 'SMIG · IMPLAN Tijuana', role: 'Desarrollador principal del módulo',
+    contribution: 'Importación de polígonos y cálculo de uso de suelo por categoría con PostGIS, dividiendo y reparando geometrías complejas para que el análisis sea viable.',
+  },
   'Sistema POS Karamelos': {
     category: 'COMERCIO · PUNTO DE VENTA', title: 'Karamelos', role: 'Desarrollo de API REST',
     contribution: 'API en Laravel para ventas por gramaje, inventario, permisos por rol y cortes de caja X y Z. Documentación de endpoints con Swagger.',
