@@ -65,7 +65,7 @@ export const projectsData = [
       "CLI de desarrollo y Starter Template para Express.js, diseñada para automatizar la generación de arquitectura modular con Prisma y Zod.",
     technologies: [
       { name: "Node.js", color: "green" },
-      { name: "Typescript", color: "blue" },
+      { name: "TypeScript", color: "blue" },
       { name: "Express", color: "cyan" },
     ],
     githubLink: "https://github.com/SamaelMedina28/Vane",
@@ -89,11 +89,11 @@ export const projectsData = [
     description:
       "Plataforma web para la administración de clientes, pedidos, entregas e inventario de un negocio local de costurería.",
     technologies: [
-      { name: "Express Js", color: "green" },
-      { name: "Typescript", color: "blue" },
+      { name: "Express", color: "green" },
+      { name: "TypeScript", color: "blue" },
       { name: "Docker", color: "dark-blue" },
-      { name: "Mongo DB", color: "dark-green" },
-      { name: "Next Js", color: "purple" },
+      { name: "MongoDB", color: "dark-green" },
+      { name: "Next.js", color: "purple" },
       { name: "Tailwind", color: "cyan" },
     ],
     githubLink: "https://github.com/SamaelMedina28/CRM-Costureria",
@@ -467,7 +467,7 @@ export const projectsData = [
       "Creacion de sala de chat funcional con escucha de eventos en tiempo real. para multiples usuarios practicando con laravel reverb, Echo y Pusher.",
     technologies: [
       { name: "Laravel", color: "red" },
-      { name: "Laravel reverb", color: "purple" },
+      { name: "Laravel Reverb", color: "purple" },
       { name: "Pusher", color: "yellow" },
       { name: "Tailwind", color: "cyan" },
       { name: "Livewire", color: "blue" },
@@ -490,10 +490,10 @@ export const projectsData = [
     description:
       "Sitio web empresarial para veterinaria local con diseño responsive y UX/UI mejorado y rendimiento en SEO.",
     technologies: [
-      { name: "Alpine", color: "blue" },
+      { name: "Alpine.js", color: "blue" },
       { name: "Tailwind", color: "cyan" },
-      { name: "HTML", color: "orange" },
-      { name: "CSS", color: "sky" },
+      { name: "HTML5", color: "orange" },
+      { name: "CSS3", color: "sky" },
     ],
     githubLink: "https://github.com/SamaelMedina28/VetCare",
     largeDescription:

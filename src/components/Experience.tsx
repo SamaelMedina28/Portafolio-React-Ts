@@ -7,11 +7,12 @@ const experience = [
     start: '2026-07', startLabel: 'Jul 2026', end: null, endLabel: 'Presente',
     description: 'Desarrollo y mantenimiento de sistemas institucionales para procesos internos y servicios digitales.',
     highlights: [
+      'Desarrollo principal del análisis de cobertura del SMIG: importación de polígonos y cálculo de uso de suelo por categoría con PostGIS, dividiendo y reparando geometrías de millones de vértices.',
       'Implementación de módulos para digitalizar trámites y procesos administrativos gestionados en físico.',
       'Desarrollo del módulo Archivo Digital, integrando consulta inteligente de documentos para obtener información.',
       'Creación de scripts para cargar, procesar mediante OCR y vincular miles de documentos con sus registros.', 'Desarrollo y mantenimiento de aplicaciones con Next.js, PHP, PostgreSQL y servicios de Google Cloud.'
     ],
-    tools: ['Next.js', 'PHP', 'PostgreSQL', 'Google Cloud', 'OCR'],
+    tools: ['Next.js', 'PHP', 'PostgreSQL', 'PostGIS', 'Python', 'Google Cloud', 'OCR'],
   },
   {
     company: 'UABC · Facultad de Ciencias Químicas e Ingeniería',

@@ -20,12 +20,12 @@ export default function HeroSection() {
       </figure>
       <div className="terminal-window window-panel"><div className="window-titlebar"><span><Terminal size={14} /> stack — terminal</span><span aria-hidden="true">― □</span></div>
         <div className="terminal-content"><p className="terminal-command"><span>samael@dev</span><span className="terminal-path">~</span>$ cat stack.json</p>
-          <dl className="stack-output"><div><dt>frontend</dt><dd>React · TypeScript · Next.js</dd></div><div><dt>backend</dt><dd>Laravel · PHP · Node.js</dd></div><div><dt>workflow</dt><dd>Git · Docker · Linux</dd></div></dl>
+          <dl className="stack-output"><div><dt>frontend</dt><dd>React · TypeScript · Next.js</dd></div><div><dt>backend</dt><dd>Express · PostgreSQL · Python</dd></div><div><dt>workflow</dt><dd>Git · Docker · Google Cloud</dd></div></dl>
           <div className="terminal-palette" aria-label="Paleta del tema"><span /><span /><span /><span /><span /><span /><span /><span /></div>
           <p className="terminal-command terminal-last"><span>❯</span><span className="terminal-cursor" aria-hidden="true" /></p>
         </div>
       </div>
     </div>
-    <div className="intro-footnote"><span><Code2 size={14} /> Laravel, React y mucha curiosidad.</span><a href="#proyectos">Desliza para explorar <ArrowDown size={14} /></a></div>
+    <div className="intro-footnote"><span><Code2 size={14} /> TypeScript, PostgreSQL y mucha curiosidad.</span><a href="#proyectos">Desliza para explorar <ArrowDown size={14} /></a></div>
   </section>;
 }
