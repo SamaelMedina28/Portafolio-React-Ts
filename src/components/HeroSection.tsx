@@ -1,11 +1,12 @@
 import { ArrowDown, ArrowUpRight, Code2, MapPin, Terminal } from 'lucide-react';
 import PixelName from './ui/PixelName';
+import ScrambleText from './ui/ScrambleText';
 
 export default function HeroSection() {
   return <section id="inicio" className="page-width intro-section" aria-labelledby="intro-title">
     <div className="workspace-heading"><span><span className="prompt-symbol">~</span> / home / samael / portafolio</span><span className="availability"><span /> Disponible para proyectos</span></div>
     <div className="intro-copy">
-      <p className="eyebrow"><span className="prompt-symbol">›</span> HOLA, SOY UN DESARROLLADOR FULL STACK</p>
+      <p className="eyebrow"><span className="prompt-symbol">›</span> <ScrambleText text="HOLA, SOY UN DESARROLLADOR FULL STACK" /></p>
       <h1 id="intro-title"><span className="sr-only">Samael Medina</span><PixelName /></h1>
       <p className="intro-lead">Ideas claras.<br />Software que funciona.</p>
       <p className="intro-description">Construyo aplicaciones web, sistemas para negocios y herramientas para otros desarrolladores. Del primer dato al último detalle.</p>
@@ -19,7 +20,7 @@ export default function HeroSection() {
         </div>
       </figure>
       <div className="terminal-window window-panel"><div className="window-titlebar"><span><Terminal size={14} /> stack — terminal</span><span aria-hidden="true">― □</span></div>
-        <div className="terminal-content"><p className="terminal-command"><span>samael@dev</span><span className="terminal-path">~</span>$ cat stack.json</p>
+        <div className="terminal-content"><p className="terminal-command"><span>samael@dev</span><span className="terminal-path">~</span>$ <span className="terminal-typed">cat stack.json</span></p>
           <dl className="stack-output"><div><dt>frontend</dt><dd>React · TypeScript · Next.js</dd></div><div><dt>backend</dt><dd>Express · PostgreSQL · Python</dd></div><div><dt>workflow</dt><dd>Git · Docker · Google Cloud</dd></div></dl>
           <div className="terminal-palette" aria-label="Paleta del tema"><span /><span /><span /><span /><span /><span /><span /><span /></div>
           <p className="terminal-command terminal-last"><span>❯</span><span className="terminal-cursor" aria-hidden="true" /></p>

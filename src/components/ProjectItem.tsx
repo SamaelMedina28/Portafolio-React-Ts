@@ -18,7 +18,11 @@ export default function ProjectItem({ name, image_path, technologies, githubLink
   const filename = image_path.split('/').pop()?.replace(/\.[^.]+$/, '') ?? name.toLowerCase().replace(/\s+/g, '-');
 
   return (
-    <article className="project-case">
+    <article className="project-case" onPointerMove={event => {
+      const box = event.currentTarget.getBoundingClientRect();
+      event.currentTarget.style.setProperty('--mx', `${event.clientX - box.left}px`);
+      event.currentTarget.style.setProperty('--my', `${event.clientY - box.top}px`);
+    }}>
       <div className="window-titlebar project-titlebar">
         <span><FolderCode size={14} aria-hidden="true" /> {filename}.app</span>
         <span className="project-number" aria-label={`Proyecto ${index}`}>{index.toString().padStart(2, '0')}</span>

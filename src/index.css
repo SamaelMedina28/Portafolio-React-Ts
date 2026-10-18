@@ -371,9 +371,59 @@ button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
 }
 @media (prefers-reduced-motion: no-preference) {
   body, .site-header, .window-panel, .window-titlebar, .project-case, .contact-section, .site-footer, .about-section { transition: background-color .2s, color .2s, border-color .2s; }
-  .intro-copy, .intro-workspace { animation: enter-up .6s ease-out both; }
-  .intro-workspace { animation-delay: .1s; }
+  /* Hero: entrada escalonada con desenfoque. */
+  .workspace-heading, .intro-copy > *, .intro-workspace > *, .intro-footnote { animation: enter-blur .5s cubic-bezier(.22, 1, .36, 1) both; }
+  .intro-copy > .eyebrow { animation-delay: 0s; }
+  .intro-copy > .intro-lead { animation-delay: .45s; }
+  .intro-copy > .intro-description { animation-delay: .52s; }
+  .intro-copy > .intro-actions { animation-delay: .6s; }
+  .intro-workspace > :nth-child(1) { animation-delay: .1s; }
+  .intro-workspace > :nth-child(2) { animation-delay: .18s; }
+  .intro-footnote { animation-delay: .7s; }
+  .intro-copy > h1 { animation: none; }
+  /* Nombre: los píxeles aparecen en barrido. */
+  .pixel-name rect { transform-box: fill-box; transform-origin: center; animation: pixel-in .3s cubic-bezier(.34, 1.56, .64, 1) backwards; animation-delay: calc(var(--pixel-delay) + .05s); }
+  /* Terminal: escribe el comando y después muestra la salida. */
+  .terminal-typed { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: 14ch; animation: typing .5s steps(14) .5s both; }
+  .stack-output > div { animation: enter-blur .35s ease-out both; }
+  .stack-output > div:nth-child(1) { animation-delay: 1.05s; }
+  .stack-output > div:nth-child(2) { animation-delay: 1.12s; }
+  .stack-output > div:nth-child(3) { animation-delay: 1.19s; }
+  .terminal-palette span { animation: pixel-in .35s cubic-bezier(.34, 1.56, .64, 1) backwards; }
+  .terminal-palette span:nth-child(1) { animation-delay: 1.25s; } .terminal-palette span:nth-child(2) { animation-delay: 1.29s; }
+  .terminal-palette span:nth-child(3) { animation-delay: 1.33s; } .terminal-palette span:nth-child(4) { animation-delay: 1.37s; }
+  .terminal-palette span:nth-child(5) { animation-delay: 1.41s; } .terminal-palette span:nth-child(6) { animation-delay: 1.45s; }
+  .terminal-palette span:nth-child(7) { animation-delay: 1.49s; } .terminal-palette span:nth-child(8) { animation-delay: 1.53s; }
+  .terminal-last { animation: enter-blur .3s ease-out 1.6s both; }
   .terminal-cursor { animation: blink 1.2s step-end infinite; }
+  .availability > span { animation: pulse-dot 2.4s ease-out infinite; }
+
+  /* Aparición al hacer scroll. */
+  .reveal { opacity: 0; transform: translateY(10px); transition: opacity .5s ease-out var(--reveal-delay, 0ms), transform .5s cubic-bezier(.22, 1, .36, 1) var(--reveal-delay, 0ms); }
+  .reveal.is-revealed { opacity: 1; transform: none; }
+
+  /* Tarjetas de proyecto: brillo que sigue al cursor. */
+  .project-case { position: relative; }
+  .project-case::before, .project-case::after { content: ''; position: absolute; pointer-events: none; opacity: 0; transition: opacity .35s; }
+  .project-case::before { inset: 0; z-index: 1; background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--accent) 12%, transparent), transparent 45%); }
+  .project-case::after { inset: -1px; z-index: 2; padding: 1px; background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), var(--accent), transparent 60%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); }
+  .project-case:hover::before, .project-case:hover::after { opacity: 1; }
+  .project-image-button img { transition: transform .6s cubic-bezier(.22, 1, .36, 1); }
+  .project-image-button:hover img { transform: translateY(-4px) scale(1.02); }
+
+  /* Línea de tiempo que se dibuja al entrar en pantalla. */
+  .experience-entry::after { content: ''; position: absolute; top: 0; bottom: 0; left: -1px; width: 1px; background: linear-gradient(var(--accent), transparent); transform: scaleY(0); transform-origin: top; }
+  .experience-entry.in-view::after { animation: draw-line 1.4s cubic-bezier(.22, 1, .36, 1) .25s forwards; }
+  .experience-entry:first-child::before { animation: pulse-dot 2.4s ease-out infinite; }
+
+  /* Botón principal con destello al pasar el cursor. */
+  .button-primary { position: relative; overflow: hidden; }
+  .button-primary::after { content: ''; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / .35) 50%, transparent 70%); transform: translateX(-120%); transition: transform .7s cubic-bezier(.22, 1, .36, 1); }
+  .button-primary:hover::after { transform: translateX(120%); }
+
+  @supports (animation-timeline: scroll()) {
+    .scroll-progress { animation: grow-x linear both; animation-timeline: scroll(root); }
+  }
   .text-link svg, .button-primary svg, .button-secondary svg { transition: transform .2s; }
   .text-link:hover svg, .button-secondary:hover svg { transform: translate(2px, -2px); }
   .button-primary:hover svg { transform: translateY(2px); }
@@ -381,6 +431,13 @@ button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
 }
 @keyframes enter-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes blink { 50% { opacity: 0; } }
+@keyframes enter-blur { from { opacity: 0; transform: translateY(8px); filter: blur(3px); } }
+@keyframes pixel-in { from { opacity: 0; transform: scale(0); } }
+@keyframes typing { from { width: 0; } }
+@keyframes draw-line { to { transform: scaleY(1); } }
+@keyframes grow-x { to { transform: scaleX(1); } }
+@keyframes pulse-dot { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent); } 70%, 100% { box-shadow: 0 0 0 7px transparent; } }
+.scroll-progress { position: fixed; inset: 0 0 auto; z-index: 60; height: 2px; background: linear-gradient(90deg, var(--accent), var(--pink)); transform: scaleX(0); transform-origin: left; pointer-events: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }

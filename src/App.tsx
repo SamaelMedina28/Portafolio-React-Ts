@@ -13,6 +13,7 @@ function App() {
 
   return (
     <>
+      <div className="scroll-progress" aria-hidden="true" />
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
       <Navbar />
       <main id="contenido">
