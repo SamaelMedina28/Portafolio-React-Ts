@@ -382,10 +382,10 @@ export const projectsData = [
     ],
   },
   {
-    name: "Horario UABC React (Migracion en proceso)",
+    name: "Horario UABC React",
     image_path: "img/projects/horario-react.png",
     description:
-      "Se migro la aplicacion web de Horario UABC a React con Inertia para mejor manejo de datos y reactividad. (En proceso)",
+      "Migración de Horario UABC a React con Inertia. Importa el horario oficial de la universidad desde su PDF y genera automáticamente todas las materias y clases.",
     technologies: [
       { name: "Laravel", color: "red" },
       { name: "MySQL", color: "yellow" },
@@ -396,9 +396,9 @@ export const projectsData = [
     ],
     githubLink: "https://github.com/SamaelMedina28/Horario-react-inertia",
     largeDescription:
-      "Esta es la versión en React de la aplicación «Horario UABC», una migración creada con Inertia para aprovechar un flujo más moderno, rápido y dinámico entre Laravel y el frontend. En esta versión mejoré la experiencia visual, la organización de componentes y la forma de gestionar materias y clases dentro del horario.La interfaz permite crear, editar y eliminar tanto materias como las clases asociadas a un día específico, ofreciendo una interacción más fluida gracias a React y una gestión de datos más limpia mediante Inertia. Además, se renovó el diseño general utilizando Tailwind para obtener una apariencia más ordenada, actual y responsiva.",
+      "Esta es la versión en React de la aplicación «Horario UABC», una migración creada con Inertia para aprovechar un flujo más moderno, rápido y dinámico entre Laravel y el frontend. Al registrarse, el usuario puede elegir entre capturar su horario manualmente o importarlo directamente desde el PDF de horario que entrega la UABC: el sistema lee el documento, identifica cada asignatura con su clave, catedrático, día, hora de inicio y fin, grupo y salón, y muestra una vista de confirmación con las clases agrupadas por día antes de guardarlas. Al confirmar, con un solo envío se crean todas las materias (sin duplicados) y todas sus clases de la semana, por lo que ya no es necesario escribirlas una por una. Para la captura manual, los formularios son dinámicos y permiten agregar o quitar varias materias o varias clases de un día en una sola pantalla, con opción de omitir días sin clases. Una vez creado el horario, se pueden editar y eliminar materias y clases por día con confirmación antes de borrar, y el dashboard muestra en un carrusel las clases del día actual. Toda la interfaz está en español, tiene pantalla de bienvenida y un diseño renovado con Tailwind, shadcn/ui y componentes animados de Magic UI.",
     learnings:
-      "En esta migración profundicé en TypeScript, aprendiendo a usar interfaces, types y el manejo de errores para tener un código más seguro y predecible. También integré componentes de shadcn/ui, lo que me permitió estructurar una interfaz más consistente y escalable. Otro aprendizaje clave fue comprender cómo manejar formularios dinámicos desde React, especialmente al editar múltiples campos al mismo tiempo y al separar correctamente la eliminación visual de campos en el formulario del borrado real en la base de datos, evitando inconsistencias entre UI y backend.",
+      "En esta migración profundicé en TypeScript, aprendiendo a usar interfaces, types y el manejo de errores para tener un código más seguro y predecible. También integré componentes de shadcn/ui, lo que me permitió estructurar una interfaz más consistente y escalable. Uno de los retos más interesantes fue la importación desde PDF: usé smalot/pdfparser para extraer el texto y expresiones regulares para separar cada asignatura y obtener sus datos, normalizando los días (acentos y mayúsculas) y ordenando las clases por día y hora. Aprendí a guardar muchos registros relacionados a partir de un solo formulario dentro de una transacción de base de datos, para que si algo falla no quede un horario a medias. También resolví un error 502 en producción con Nginx causado por enviar todas las clases extraídas en la URL de redirección; lo corregí pasándolas como datos flash de sesión. Además, reforcé el manejo de formularios dinámicos en React, separando la eliminación visual de campos del borrado real en la base de datos, y el uso de middlewares para dirigir a usuarios nuevos al flujo de configuración inicial.",
     imgsSlider: [
       "img/projects/horario-react/img1.png",
       "img/projects/horario-react/img2.png",
@@ -407,6 +407,7 @@ export const projectsData = [
       "img/projects/horario-react/img5.png",
       "img/projects/horario-react/img6.png",
       "img/projects/horario-react/img7.png",
+      "img/projects/horario-react/img8.png",
     ],
   },
   {
