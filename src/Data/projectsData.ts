@@ -143,6 +143,8 @@ export const projectsData = [
       "img/projects/cimafood/img8.png",
       "img/projects/cimafood/img9.png",
       "img/projects/cimafood/img10.png",
+      "img/projects/cimafood/img11.png",
+      "img/projects/cimafood/img12.png",
     ],
   },
   {
